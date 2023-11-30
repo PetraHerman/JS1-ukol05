@@ -10,3 +10,25 @@
 
 // Použítím funkcí salary a taxed spočítejte svoji měsíční mzdu po 15% zdanění.
 
+//--------------------------------------------
+
+
+const salary = (wage, hours, days) => {
+        return wage * hours * days;
+}
+
+const grossSalary = salary(wage, hours, days);
+
+const taxed = (grossSalary, tax) => {
+    return grossSalary * ((100 - tax)/100);
+}
+
+const wage = Number(prompt("Zadej hrubou mzdu v korunách za hodinu:"));  
+const hours = Number(prompt("Zadej průměrný počet odpracovaných hodin za den:"));  
+const days = Number(prompt("Zadej průměrný počet odpracovaných dní za měsíc:")); 
+
+
+const tax = Number(prompt("Zadej procento zdanění:")); 
+
+console.log(`Hrubá mzda je: ${salary(wage, hours, days)}`);
+console.log(`Čistá mzda je: ${taxed(grossSalary,tax)}`);
