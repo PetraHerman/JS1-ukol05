@@ -17,7 +17,6 @@ const salary = (wage, hours, days) => {
         return wage * hours * days;
 }
 
-const grossSalary = salary(wage, hours, days);
 
 const taxed = (grossSalary, tax) => {
     return grossSalary * ((100 - tax)/100);
@@ -27,6 +26,7 @@ const wage = Number(prompt("Zadej hrubou mzdu v korunách za hodinu:"));
 const hours = Number(prompt("Zadej průměrný počet odpracovaných hodin za den:"));  
 const days = Number(prompt("Zadej průměrný počet odpracovaných dní za měsíc:")); 
 
+const grossSalary = salary(wage, hours, days);
 
 const tax = Number(prompt("Zadej procento zdanění:")); 
 
